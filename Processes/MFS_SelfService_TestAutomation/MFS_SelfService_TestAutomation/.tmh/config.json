@@ -1,0 +1,9 @@
+{
+  "issueKeyTestcaseValues": {},
+  "testManagerBasePath": "https://cloud.uipath.com/uipathlabs/DemoRepository/testmanager_/",
+  "defaultProject": {
+    "id": "dc13ae67-2d24-0000-cd55-0b45c13decbf",
+    "name": "OAMF_ManufacturingSelfServiceOpenAI",
+    "key": "OAMF"
+  }
+}

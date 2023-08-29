@@ -1,0 +1,1028 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Salesforce_GetAccountDetails" this:Salesforce_GetAccountDetails.in_Name="Avi Green" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uia="clr-namespace:UiPathTeam.Interactive.Activities;assembly=UiPathTeam.Interactive.Activities" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:usia="clr-namespace:UiPath.Salesforce.IntegrationService.Activities;assembly=UiPath.Salesforce.IntegrationService.Activities" xmlns:usiascb="clr-namespace:UiPath.Salesforce.IntegrationService.Activities.SWEntities.C2eb7e2eaf1674fc99ebd6b673dbae247_Contact.Bundle;assembly=C2eb7e2eaf1674fc99eb.cmBOw2viPWG1gdk4u1fDylR3" xmlns:usiascb1="clr-namespace:UiPath.Salesforce.IntegrationService.Activities.SWEntities.C2eb7e2eaf1674fc99ebd6b673dbae247_curated_contact.Bundle;assembly=C2eb7e2eaf1674fc99eb.vafCq3oTsBE1NKLCz1AtHvx" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_Name" Type="InArgument(x:String)" />
+    <x:Property Name="o_ContactName" Type="OutArgument(x:String)" />
+    <x:Property Name="o_ContactAddress" Type="OutArgument(x:String)" />
+    <x:Property Name="o_ContactPhone" Type="OutArgument(x:String)" />
+    <x:Property Name="o_ContactEmail" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1234,1601</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Salesforce_GetAccountDetails_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="84">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Salesforce.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Salesforce.IntegrationService.Activities.SWEntities.C2eb7e2eaf1674fc99ebd6b673dbae247_curated_account.Bundle</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Salesforce.IntegrationService.Activities.SWEntities.Ccbe7eca5d72b4cf6b78524ab2800402a_curated_contact.Bundle</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.CEQL</x:String>
+      <x:String>UiPath.Salesforce.IntegrationService.Activities.SWEntities.Ccbe7eca5d72b4cf6b78524ab2800402a_Contact.Bundle</x:String>
+      <x:String>UiPath.Salesforce.IntegrationService.Activities.SWEntities.C2eb7e2eaf1674fc99ebd6b673dbae247_curated_contact.Bundle</x:String>
+      <x:String>UiPath.Salesforce.IntegrationService.Activities.SWEntities.C2eb7e2eaf1674fc99ebd6b673dbae247_Contact.Bundle</x:String>
+      <x:String>UiPathTeam.Interactive.Activities.Properties</x:String>
+      <x:String>UiPathTeam.Interactive.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="84">
+      <AssemblyReference>C2eb7e2eaf1674fc99eb.HAlDnE9imK1vhEBA4Q1Rdb3</AssemblyReference>
+      <AssemblyReference>C2eb7e2eaf1674fc99eb.lvJpY2dKR7P1Mosk31uVBbW3</AssemblyReference>
+      <AssemblyReference>C2eb7e2eaf1674fc99eb.Ue2FxiaUoE1qmUf04GKAeE1</AssemblyReference>
+      <AssemblyReference>Ccbe7eca5d72b4cf6b78.NPTQ81Oq3EN1q1SrG4bzbV01</AssemblyReference>
+      <AssemblyReference>Ccbe7eca5d72b4cf6b78.TVRZj3bzGUI1yLrNf26zOaw</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Salesforce.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPathTeam.Interactive.Activities</AssemblyReference>
+      <AssemblyReference>C2eb7e2eaf1674fc99eb.cmBOw2viPWG1gdk4u1fDylR3</AssemblyReference>
+      <AssemblyReference>C2eb7e2eaf1674fc99eb.vafCq3oTsBE1NKLCz1AtHvx</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap2010:Annotation.AnnotationText="Get contact details from Salesforce&#xA;" DisplayName="Salesforce_GetAccountDetails" sap:VirtualizedContainerService.HintSize="493,1536" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="usiascb:Contact" Name="ContactRecord" />
+      <Variable x:TypeArguments="usiascb1:curated_contact" Name="ContactDetails" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="Black" Hide="6000" sap:VirtualizedContainerService.HintSize="431,124" sap2010:WorkflowViewState.IdRef="DisplayMessage_1" Message="Retrieving user-specific information from Salesforce" NewStyle="True" Position="BottomRight" Preset="Custom">
+      <uia:DisplayMessage.Opacity>
+        <InArgument x:TypeArguments="s:Nullable(x:Double)">
+          <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8" />
+        </InArgument>
+      </uia:DisplayMessage.Opacity>
+    </uia:DisplayMessage>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Getting Contact Details from SFDC&quot;]" />
+    <usia:SearchUsingSOQL ActivityInstanceId="b546cbe4-c3a1-44dd-ac4d-683dbf370380" BindingsVersion="2.1" BusinessEntityName="Contact" ConfiguredBusinessEntity="" ConnectionId="2eb7e2ea-f167-4fc9-9ebd-6b673dbae247" Connector="uipath-salesforce-sfdc" CrudOperation="Search" DesignConnectionEnabled="True" DisplayName="Search Records" sap:VirtualizedContainerService.HintSize="431,225" sap2010:WorkflowViewState.IdRef="SearchUsingSOQL_1" UseRawCEQL="False">
+      <usia:SearchUsingSOQL.BusinessEntity>
+        <uibi:BusinessEntity Name="Contact">
+          <uibi:BusinessEntity.AllFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="13">
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The maximum number of records to return." DisplayName="Max records" FormDataType="ExpressionTextBox" InArgumentValue="1" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="maximumRecordsReturned" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Value>
+                  <Literal x:TypeArguments="x:Int32">1</Literal>
+                </uiisi:OperationEntityField.Value>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Specify if deleted objects should be included in the search." DisplayName="Include deleted" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="includeDeleted" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Sort nulls last." DisplayName="Nulls last" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="nullsLast" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The field(s) to order by. For example to order by Id ascending use 'Id asc'. A unique value (such as ID) must be provided to support pagination above 1000 records" DisplayName="Order by" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="orderBy" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Int32" x:Name="__ReferenceID5" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The page size for pagination, which defaults to 200 if not supplied" DisplayName="Page size" FormDataType="ExpressionTextBox" InArgumentValue="50" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="pageSize" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:Int32">50</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The token for the next page of records. Use this token to iterate through the pages until a empty list is returned." DisplayName="Next Page Token" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="nextPage" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Specify if you wish to return the total count. If the end point does not support this natively, two operations will be performed in order to return the count. Also this will be done only when you are requesting the first page of a large result set" DisplayName="Return total count" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="returnTotalCount" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Where" DisplayName="Where" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="where" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="usiascb:Contact" x:Name="__ReferenceID7" ArgumentDirection="Out" ArgumentType="usiascb:Contact" DataType="Contact" Description="The first record returned." DisplayName="First Contact Record" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="firstResultAsEntity" OutArgumentValue="[ContactRecord]" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <OutArgument x:TypeArguments="usiascb:Contact">[ContactRecord]</OutArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Value>
+                  <VisualBasicReference x:TypeArguments="usiascb:Contact">[ContactRecord]</VisualBasicReference>
+                </uiisi:OperationEntityField.Value>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="sd:DataTable" ArgumentDirection="Out" ArgumentType="sd:DataTable" DataType="DataTable" Description="The list of records." DisplayName="List of Contact" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="resultAsDataTable" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="usiascb:Contact[]" x:Name="__ReferenceID8" ArgumentDirection="Out" ArgumentType="usiascb:Contact[]" DataType="Contact[]" Description="The list of records." DisplayName="List of Contact" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="resultAsEntityCollection" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The token for the next page of records. Use this token to iterate through the pages until a empty list is returned." DisplayName="Next Page Token" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Header" Name="nextPageTokenFromHeader" ShouldFilterOnChange="False" />
+            </scg:List>
+          </uibi:BusinessEntity.AllFields>
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID0}" DisplayName="Contact" EligibleOperations="64" IsCustomEntity="False" Name="Contact" />
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.Metadata>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+              <x:String x:Key="Object">Contact</x:String>
+              <x:String x:Key="FullPath">/Contact</x:String>
+              <x:String x:Key="Method">GET</x:String>
+              <x:Null x:Key="BaseObject" />
+            </scg:Dictionary>
+          </uibi:BusinessEntity.Metadata>
+          <uibi:BusinessEntity.SearchableFields>
+            <scg:List x:TypeArguments="uibi:SearchableField" Capacity="78">
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Account ID" InputType="x:String" Name="AccountId" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Assistant's Name" InputType="x:String" Name="AssistantName" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Asst. Phone" InputType="x:String" Name="AssistantPhone" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField DisplayName="Birthdate" InputType="s:DateTime" Mask="yyyy-MM-dd" Name="Birthdate" QueryType="s:DateTime">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Case ID" InputType="x:String" Name="Case_ID__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Clean Status" InputType="s:Enum" Name="CleanStatus" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Conditions causing physical limitations" InputType="x:Boolean" Name="Conditions_causing_physical_limitations__c" QueryType="x:Boolean">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Created By ID" InputType="x:String" Name="CreatedById" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField DisplayName="Created Date" InputType="s:DateTime" Mask="yyyy-MM-dd'T'HH:mm:ss.fffzzz" Name="CreatedDate" QueryType="s:DateTime">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField DisplayName="Date of Birth" InputType="s:DateTime" Mask="yyyy-MM-dd" Name="Date_of_Birth__c" QueryType="s:DateTime">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Deductions" InputType="s:Enum" Name="Deductions__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Department" InputType="x:String" Name="Department" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Email" InputType="x:String" Name="Email" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField DisplayName="Email Bounced Date" InputType="s:DateTime" Mask="yyyy-MM-dd'T'HH:mm:ss.fffzzz" Name="EmailBouncedDate" QueryType="s:DateTime">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Email Bounced Reason" InputType="x:String" Name="EmailBouncedReason" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Employment" InputType="s:Enum" Name="Employment__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Employment in the past year" InputType="s:Enum" Name="Employment_in_the_past_year__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Ethnicity" InputType="s:Enum" Name="Ethnicity__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Business Fax" InputType="x:String" Name="Fax" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Filing Federal Income next year?" InputType="x:Boolean" Name="Filing_Federal_Income_next_year__c" QueryType="x:Boolean">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="First Name" InputType="x:String" Name="FirstName" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Health coverage needed" InputType="x:Boolean" Name="Health_coverage_needed__c" QueryType="x:Boolean">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Home Phone" InputType="x:String" Name="HomePhone" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Contact ID" InputType="x:String" Name="Id" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Individual ID" InputType="x:String" Name="IndividualId" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Deleted" InputType="x:Boolean" Name="IsDeleted" QueryType="x:Boolean">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Is Email Bounced" InputType="x:Boolean" Name="IsEmailBounced" QueryType="x:Boolean">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Data.com Key" InputType="x:String" Name="Jigsaw" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Jigsaw Contact ID" InputType="x:String" Name="JigsawContactId" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Languages" InputType="x:String" Name="Languages__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField DisplayName="Last Activity" InputType="s:DateTime" Mask="yyyy-MM-dd" Name="LastActivityDate" QueryType="s:DateTime">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField DisplayName="Last Stay-in-Touch Request Date" InputType="s:DateTime" Mask="yyyy-MM-dd'T'HH:mm:ss.fffzzz" Name="LastCURequestDate" QueryType="s:DateTime">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField DisplayName="Last Stay-in-Touch Save Date" InputType="s:DateTime" Mask="yyyy-MM-dd'T'HH:mm:ss.fffzzz" Name="LastCUUpdateDate" QueryType="s:DateTime">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Last Modified By ID" InputType="x:String" Name="LastModifiedById" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField DisplayName="Last Modified Date" InputType="s:DateTime" Mask="yyyy-MM-dd'T'HH:mm:ss.fffzzz" Name="LastModifiedDate" QueryType="s:DateTime">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Last Name" InputType="x:String" Name="LastName" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField DisplayName="Last Referenced Date" InputType="s:DateTime" Mask="yyyy-MM-dd'T'HH:mm:ss.fffzzz" Name="LastReferencedDate" QueryType="s:DateTime">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField DisplayName="Last Viewed Date" InputType="s:DateTime" Mask="yyyy-MM-dd'T'HH:mm:ss.fffzzz" Name="LastViewedDate" QueryType="s:DateTime">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Lead Source" InputType="s:Enum" Name="LeadSource" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Level" InputType="s:Enum" Name="Level__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Mailing City" InputType="x:String" Name="MailingCity" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Mailing Country" InputType="x:String" Name="MailingCountry" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Mailing Geocode Accuracy" InputType="s:Enum" Name="MailingGeocodeAccuracy" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Mailing Latitude" InputType="x:Double" Name="MailingLatitude" QueryType="x:Double">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Mailing Longitude" InputType="x:Double" Name="MailingLongitude" QueryType="x:Double">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Mailing Zip/Postal Code" InputType="x:String" Name="MailingPostalCode" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Mailing State/Province" InputType="x:String" Name="MailingState" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Mailing Street" InputType="x:String" Name="MailingStreet" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Master Record ID" InputType="x:String" Name="MasterRecordId" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Mobile Phone" InputType="x:String" Name="MobilePhone" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" x:Name="__ReferenceID9" DisplayName="Full Name" InputType="x:String" Name="Name" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Other City" InputType="x:String" Name="OtherCity" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Other Country" InputType="x:String" Name="OtherCountry" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Other Geocode Accuracy" InputType="s:Enum" Name="OtherGeocodeAccuracy" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Other Latitude" InputType="x:Double" Name="OtherLatitude" QueryType="x:Double">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Other Longitude" InputType="x:Double" Name="OtherLongitude" QueryType="x:Double">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Other Phone" InputType="x:String" Name="OtherPhone" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Other Zip/Postal Code" InputType="x:String" Name="OtherPostalCode" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Other State/Province" InputType="x:String" Name="OtherState" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Other Street" InputType="x:String" Name="OtherStreet" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Other Income" InputType="s:Enum" Name="Other_Income__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Owner ID" InputType="x:String" Name="OwnerId" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Business Phone" InputType="x:String" Name="Phone" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Photo URL" InputType="x:String" Name="PhotoUrl" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Preferred Language" InputType="x:String" Name="Preferred_Language__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Pregnant" InputType="x:Boolean" Name="Pregnant__c" QueryType="x:Boolean">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Race (Optional - select all that apply)" InputType="s:Enum" Name="Race_Optional_select_all_that_apply__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Record Type ID" InputType="x:String" Name="RecordTypeId" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Reports To ID" InputType="x:String" Name="ReportsToId" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="SSN" InputType="x:String" Name="SSN__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Salutation" InputType="s:Enum" Name="Salutation" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Self-Employment Net Income" InputType="x:Double" Name="Self_Employment_Net_Income__c" QueryType="x:Double">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField DisplayName="System Modstamp" InputType="s:DateTime" Mask="yyyy-MM-dd'T'HH:mm:ss.fffzzz" Name="SystemModstamp" QueryType="s:DateTime">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Title" InputType="x:String" Name="Title" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Type of Work if Self-Employed" InputType="x:String" Name="Type_of_Work_if_Self_Employed__c" QueryType="x:String">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>LIKE</x:String>
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="U.S. citizen or U.S. national" InputType="x:Boolean" Name="U_S_citizen_or_U_S_national__c" QueryType="x:Boolean">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Wants help with medical bills" InputType="x:Boolean" Name="Wants_help_with_medical_bills__c" QueryType="x:Boolean">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="1">
+                    <x:String>=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+              <uibi:SearchableField Mask="{x:Null}" DisplayName="Yearly Income (this year)" InputType="x:Double" Name="Yearly_Income__c" QueryType="x:Double">
+                <uibi:SearchableField.SearchableOperators>
+                  <scg:List x:TypeArguments="x:String" Capacity="5">
+                    <x:String>&lt;=</x:String>
+                    <x:String>&lt;</x:String>
+                    <x:String>=</x:String>
+                    <x:String>&gt;</x:String>
+                    <x:String>&gt;=</x:String>
+                  </scg:List>
+                </uibi:SearchableField.SearchableOperators>
+              </uibi:SearchableField>
+            </scg:List>
+          </uibi:BusinessEntity.SearchableFields>
+          <uibi:BusinessEntity.SearchableJoins>
+            <scg:List x:TypeArguments="x:String" Capacity="2">
+              <x:String>AND</x:String>
+              <x:String>OR</x:String>
+            </scg:List>
+          </uibi:BusinessEntity.SearchableJoins>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="16">
+              <x:Reference>__ReferenceID1</x:Reference>
+              <x:Reference>__ReferenceID2</x:Reference>
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
+              <x:Reference>__ReferenceID6</x:Reference>
+              <x:Reference>__ReferenceID7</x:Reference>
+              <x:Reference>__ReferenceID8</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </usia:SearchUsingSOQL.BusinessEntity>
+      <usia:SearchUsingSOQL.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
+      </usia:SearchUsingSOQL.CachedLookupValues>
+      <usia:SearchUsingSOQL.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="2eb7e2ea-f167-4fc9-9ebd-6b673dbae247" ConnectionName="uipathlabs@gmail.com" ConnectorKey="uipath-salesforce-sfdc">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Salesforce.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </usia:SearchUsingSOQL.DesignConnectionRequest>
+      <usia:SearchUsingSOQL.FilterTree>
+        <uiisi:FilterTree Index="0" SearchableJoin="AND">
+          <uiisi:FilterTree.Filters>
+            <scg:List x:TypeArguments="uiisi:Filter" Capacity="4">
+              <uiisi:Filter ComputedValue="{x:Null}" SearchableField="{x:Reference __ReferenceID9}" Criteria="Name" Operator="LIKE">
+                <uiisi:Filter.Value>
+                  <InArgument x:TypeArguments="x:String">[in_Name]</InArgument>
+                </uiisi:Filter.Value>
+              </uiisi:Filter>
+            </scg:List>
+          </uiisi:FilterTree.Filters>
+          <uiisi:FilterTree.Groups>
+            <scg:List x:TypeArguments="uiisi:FilterTree" Capacity="0" />
+          </uiisi:FilterTree.Groups>
+        </uiisi:FilterTree>
+      </usia:SearchUsingSOQL.FilterTree>
+      <usia:SearchUsingSOQL.SelectedFields>
+        <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
+          <x:Reference>__ReferenceID1</x:Reference>
+          <x:Reference>__ReferenceID2</x:Reference>
+          <x:Reference>__ReferenceID3</x:Reference>
+          <x:Reference>__ReferenceID4</x:Reference>
+          <x:Reference>__ReferenceID5</x:Reference>
+          <x:Reference>__ReferenceID6</x:Reference>
+          <x:Reference>__ReferenceID7</x:Reference>
+          <x:Reference>__ReferenceID8</x:Reference>
+        </scg:List>
+      </usia:SearchUsingSOQL.SelectedFields>
+      <usia:SearchUsingSOQL.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </usia:SearchUsingSOQL.TelemetryProperties>
+    </usia:SearchUsingSOQL>
+    <usia:GetContactByID ActivityInstanceId="9f4533ef-99a9-4fae-a6e2-ed141d643851" BindingsVersion="2.1" BusinessEntityName="Contact" ConfiguredBusinessEntity="curated_contact" ConnectionId="2eb7e2ea-f167-4fc9-9ebd-6b673dbae247" Connector="uipath-salesforce-sfdc" CrudOperation="Get" DesignConnectionEnabled="True" DisplayName="Get Contact" sap:VirtualizedContainerService.HintSize="431,121" sap2010:WorkflowViewState.IdRef="GetContactByID_1">
+      <usia:GetContactByID.BusinessEntity>
+        <uibi:BusinessEntity Name="curated_contact">
+          <uibi:BusinessEntity.AllFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID11" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Type the name or ID of the contact to retrieve. ID of the contact can also be retrieved from the event trigger output" DisplayName="Contact" FormDataType="ExpressionTextBox" InArgumentValue="[ContactRecord.Id]" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Path" Name="curated_contactId" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">[ContactRecord.Id]</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+                <uiisi:OperationEntityField.Value>
+                  <VisualBasicValue x:TypeArguments="x:String">[ContactRecord.Id]</VisualBasicValue>
+                </uiisi:OperationEntityField.Value>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="usiascb1:curated_contact" x:Name="__ReferenceID12" ArgumentDirection="Out" ArgumentType="usiascb1:curated_contact" DataType="curated_contact" Description="The record retrieved by this activity." DisplayName="Contact" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsCustomType="True" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="curated_contact" OutArgumentValue="[ContactDetails]" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <OutArgument x:TypeArguments="usiascb1:curated_contact">[ContactDetails]</OutArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPermanentlyHidden">False</x:Boolean>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+                <uiisi:OperationEntityField.Value>
+                  <VisualBasicReference x:TypeArguments="usiascb1:curated_contact">[ContactDetails]</VisualBasicReference>
+                </uiisi:OperationEntityField.Value>
+              </uiisi:OperationEntityField>
+            </scg:List>
+          </uibi:BusinessEntity.AllFields>
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID10}" DisplayName="Contact" EligibleOperations="2" IsCustomEntity="False" Name="curated_contact" />
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.Metadata>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID10">
+              <x:String x:Key="Object">curated_contact</x:String>
+              <x:String x:Key="FullPath">/curated_contact/{curated_contactId}</x:String>
+              <x:String x:Key="Method">GET</x:String>
+              <x:String x:Key="BaseObject">contact</x:String>
+            </scg:Dictionary>
+          </uibi:BusinessEntity.Metadata>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
+              <x:Reference>__ReferenceID11</x:Reference>
+              <x:Reference>__ReferenceID12</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </usia:GetContactByID.BusinessEntity>
+      <usia:GetContactByID.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)">
+          <x:Null x:Key="curated_contactId" />
+        </scg:Dictionary>
+      </usia:GetContactByID.CachedLookupValues>
+      <usia:GetContactByID.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="2eb7e2ea-f167-4fc9-9ebd-6b673dbae247" ConnectionName="uipathlabs@gmail.com" ConnectorKey="uipath-salesforce-sfdc">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Salesforce.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </usia:GetContactByID.DesignConnectionRequest>
+      <usia:GetContactByID.SelectedFields>
+        <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
+          <x:Reference>__ReferenceID11</x:Reference>
+          <x:Reference>__ReferenceID12</x:Reference>
+        </scg:List>
+      </usia:GetContactByID.SelectedFields>
+      <usia:GetContactByID.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </usia:GetContactByID.TelemetryProperties>
+    </usia:GetContactByID>
+    <ui:MultipleAssign DisplayName="Multiple Assign of Contacts" sap:VirtualizedContainerService.HintSize="431,194" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+      <ui:MultipleAssign.AssignOperations>
+        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[o_ContactName]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[ContactDetails.Name]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[o_ContactAddress]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[ContactDetails.MailingStreet]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[o_ContactPhone]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[ContactDetails.Phone]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+            <ui:AssignOperation.To>
+              <OutArgument x:TypeArguments="x:String">[o_ContactEmail]</OutArgument>
+            </ui:AssignOperation.To>
+            <ui:AssignOperation.Value>
+              <InArgument x:TypeArguments="x:String">[ContactDetails.Email]</InArgument>
+            </ui:AssignOperation.Value>
+          </ui:AssignOperation>
+        </scg:List>
+      </ui:MultipleAssign.AssignOperations>
+    </ui:MultipleAssign>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Contact name&quot; +o_ContactName+Environment.NewLine+&#xA;&quot;Contact Email&quot; +o_ContactEmail+Environment.NewLine+&#xA;&quot;Contact Phone&quot; +o_ContactPhone+Environment.NewLine+&#xA;&quot;Contact Address&quot; +o_ContactAddress+Environment.NewLine]" />
+    <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="431,90" sap2010:WorkflowViewState.IdRef="Delay_2" />
+    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="Black" Hide="6000" sap:VirtualizedContainerService.HintSize="431,165" sap2010:WorkflowViewState.IdRef="DisplayMessage_2" Message="[&quot;Extraction of user details has been successfully accomplished&quot;+Environment.NewLine+&#xA;&quot;Name: &quot;+o_ContactName+Environment.NewLine+&#xA;&quot;Phone: &quot;+o_ContactPhone+Environment.NewLine+&#xA;&quot;Address: &quot;+o_ContactAddress]" NewStyle="True" Position="BottomRight" Preset="Custom">
+      <uia:DisplayMessage.Opacity>
+        <InArgument x:TypeArguments="s:Nullable(x:Double)">
+          <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8" />
+        </InArgument>
+      </uia:DisplayMessage.Opacity>
+    </uia:DisplayMessage>
+  </Sequence>
+</Activity>

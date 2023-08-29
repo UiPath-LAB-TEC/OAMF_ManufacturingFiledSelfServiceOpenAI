@@ -1,0 +1,104 @@
+{
+  "name": "MFS_SelfService_TestAutomation",
+  "description": "Test Automation Project",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.OpenAI.IntegrationService.Activities": "[6.1.0]",
+    "UiPath.Salesforce.IntegrationService.Activities": "[6.1.0]",
+    "UiPath.ServiceNow.IntegrationService.Activities": "[5.2.0]",
+    "UiPath.System.Activities": "[23.4.3]",
+    "UiPath.Testing.Activities": "[23.4.1]",
+    "UiPath.UIAutomation.Activities": "[23.4.8]",
+    "UiPathTeam.Interactive.Activities": "[1.5.6.9]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "23.4.4.0",
+  "projectVersion": "1.0.146656270",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Tests",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "04f1cfa8-e414-4b02-bdb8-3bccf1cb0c4b",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "7e84490e-ae6f-4f93-9d7b-ff0deb507fe0",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "OAMF_TestManager.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "9d7f2cd4-8688-4066-9d35-8f1da73213e3",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "OAMF_SAP_Login.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "1e6efde0-cb1b-4040-8780-80daa0c6ec87",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "OAMF_SAP_Logout.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "7a6b4375-7274-47a8-b898-a6d430a3c7cf",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "OAMF_Saleforce_GetData.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "1d4f445f-b5a3-42d2-bda8-e88c01213ea2",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "OAMF_ServiceNow.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "3019ebad-9bf8-483d-97cd-d3a3331c99de",
+        "testCaseType": "TestCase",
+        "executionTemplateInvokeIsolated": false,
+        "fileName": "OAMF_OpenAI.xaml"
+      }
+    ],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

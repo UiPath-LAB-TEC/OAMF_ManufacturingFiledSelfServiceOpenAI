@@ -1,0 +1,1401 @@
+{
+  "exportedBy": null,
+  "bundleHash": null,
+  "version": "1.0.0.0",
+  "jitAssemblyCompilerCommands": [
+    {
+      "providerName": "CustomEntities",
+      "bundleOptions": {
+        "hash": "F5LRsF+qOOTm9hY4rWS8P46924T3tu+w4Je/CXXaABcOuYmUomGAZPtXuelBT4qtyz1cI3t0Z2/YctWvk9nYJw==",
+        "bundleName": "C2eb7e2eaf1674fc99ebd6b673dbae247_FieldPermissions",
+        "entitiesBundle": {
+          "Types": {
+            "FieldPermissions": {
+              "name": "FieldPermissions",
+              "properties": [
+                {
+                  "name": "Field",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Id",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "ParentId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "PermissionsEdit",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "PermissionsRead",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "SobjectType",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "SystemModstamp",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                }
+              ],
+              "baseType": {}
+            }
+          },
+          "version": 1
+        }
+      },
+      "entityAssemblyKey": {
+        "name": "UiPath.Salesforce.IntegrationService.Activities.SWEntities.C2eb7e2eaf1674fc99ebd6b673dbae247_FieldPermissions",
+        "hash": "RjVMUnNGK3FPT1RtOWhZNHJXUzhQNDY5MjRUM3R1K3c0SmUvQ1hYYUFCY091WW1Vb21HQVpQdFh1ZWxCVDRxdHl6MWNJM3QwWjIvWWN0V3ZrOW5ZSnc9PQ",
+        "assemblyName": "C2eb7e2eaf1674fc99eb.bVGyH2M9DkK1WSO6Q1K8gkv"
+      }
+    },
+    {
+      "providerName": "CustomEntities",
+      "bundleOptions": {
+        "hash": "AMahp/pBh7xq38KQBUQQQxYMTe/P7J8r3UGaeX0PvFoH+8U6cIwoKXZEMkTNM7iVidkRolhqiCjBvVJF0HQYVQ==",
+        "bundleName": "C2eb7e2eaf1674fc99ebd6b673dbae247_Contact",
+        "entitiesBundle": {
+          "Types": {
+            "Contact": {
+              "name": "Contact",
+              "properties": [
+                {
+                  "name": "AccountId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "AssistantName",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "AssistantPhone",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Birthdate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Case_ID__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "CleanStatus",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Conditions_causing_physical_limitations__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "CreatedById",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "CreatedDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Date_of_Birth__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Deductions__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Department",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Description",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Email",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "EmailBouncedDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "EmailBouncedReason",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Employment__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Employment_in_the_past_year__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Ethnicity__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Fax",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Filing_Federal_Income_next_year__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "FirstName",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Health_coverage_needed__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "HomePhone",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Id",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "IndividualId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "IsDeleted",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "IsEmailBounced",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Jigsaw",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "JigsawContactId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Languages__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastActivityDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastCURequestDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastCUUpdateDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastModifiedById",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastModifiedDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastName",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastReferencedDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastViewedDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LeadSource",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Level__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_city",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_country",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_geocodeAccuracy",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_latitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_longitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_postalCode",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_state",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_street",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingCity",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingCountry",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingGeocodeAccuracy",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingLatitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingLongitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingPostalCode",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingState",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingStreet",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MasterRecordId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MobilePhone",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Name",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_city",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_country",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_geocodeAccuracy",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_latitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_longitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_postalCode",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_state",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_street",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherCity",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherCountry",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherGeocodeAccuracy",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherLatitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherLongitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherPhone",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherPostalCode",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherState",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherStreet",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Other_Income__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OwnerId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Phone",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "PhotoUrl",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Preferred_Language__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Pregnant__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Race_Optional_select_all_that_apply__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "RecordTypeId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "ReportsToId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "SSN__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Salutation",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Self_Employment_Net_Income__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "SystemModstamp",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Title",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Type_of_Work_if_Self_Employed__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "U_S_citizen_or_U_S_national__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Wants_help_with_medical_bills__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Yearly_Income__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                }
+              ],
+              "baseType": {}
+            }
+          },
+          "version": 1
+        }
+      },
+      "entityAssemblyKey": {
+        "name": "UiPath.Salesforce.IntegrationService.Activities.SWEntities.C2eb7e2eaf1674fc99ebd6b673dbae247_Contact",
+        "hash": "QU1haHAvcEJoN3hxMzhLUUJVUVFReFlNVGUvUDdKOHIzVUdhZVgwUHZGb0grOFU2Y0l3b0tYWkVNa1ROTTdpVmlka1JvbGhxaUNqQnZWSkYwSFFZVlE9PQ",
+        "assemblyName": "C2eb7e2eaf1674fc99eb.cmBOw2viPWG1gdk4u1fDylR3"
+      }
+    },
+    {
+      "providerName": "CustomEntities",
+      "bundleOptions": {
+        "hash": "Oyram0JwRqfvrt9nw2GlQAGtPsieBDXLWuZI1+vCQdI477GDimBQGOqSMFENcgPNrBFEo40H9Sij1JQKNmMHtA==",
+        "bundleName": "C2eb7e2eaf1674fc99ebd6b673dbae247_curated_contact",
+        "entitiesBundle": {
+          "Types": {
+            "curated_contact": {
+              "name": "curated_contact",
+              "properties": [
+                {
+                  "name": "AccountId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Description",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Email",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "FirstName",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Id",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastName",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingCity",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingCountry",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingPostalCode",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingStreet",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MobilePhone",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Name",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OwnerId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Phone",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Title",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "AssistantName",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "AssistantPhone",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Birthdate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Case_ID__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "CleanStatus",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Conditions_causing_physical_limitations__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "CreatedById",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "CreatedDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Date_of_Birth__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Deductions__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Department",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "EmailBouncedDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "EmailBouncedReason",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Employment__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Employment_in_the_past_year__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Ethnicity__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Fax",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Filing_Federal_Income_next_year__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Health_coverage_needed__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "HomePhone",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "IndividualId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "IsDeleted",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "IsEmailBounced",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Jigsaw",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "JigsawContactId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Languages__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastActivityDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastCURequestDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastCUUpdateDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastModifiedById",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastModifiedDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastReferencedDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LastViewedDate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "LeadSource",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Level__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_city",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_country",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_geocodeAccuracy",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_latitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_longitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_postalCode",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_state",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingAddress_street",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingGeocodeAccuracy",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingLatitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingLongitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MailingState",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "MasterRecordId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_city",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_country",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_geocodeAccuracy",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_latitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_longitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_postalCode",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_state",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherAddress_street",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherCity",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherCountry",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherGeocodeAccuracy",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherLatitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherLongitude",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherPhone",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherPostalCode",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherState",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "OtherStreet",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Other_Income__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "PhotoUrl",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Preferred_Language__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Pregnant__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Race_Optional_select_all_that_apply__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "RecordTypeId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "ReportsToId",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "SSN__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Salutation",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Self_Employment_Net_Income__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "SystemModstamp",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Type_of_Work_if_Self_Employed__c",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "U_S_citizen_or_U_S_national__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Wants_help_with_medical_bills__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Boolean, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "Yearly_Income__c",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Single, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                }
+              ],
+              "baseType": {}
+            }
+          },
+          "version": 1
+        }
+      },
+      "entityAssemblyKey": {
+        "name": "UiPath.Salesforce.IntegrationService.Activities.SWEntities.C2eb7e2eaf1674fc99ebd6b673dbae247_curated_contact",
+        "hash": "T3lyYW0wSndScWZ2cnQ5bncyR2xRQUd0UHNpZUJEWExXdVpJMSt2Q1FkSTQ3N0dEaW1CUUdPcVNNRkVOY2dQTnJCRkVvNDBIOVNpajFKUUtObU1IdEE9PQ",
+        "assemblyName": "C2eb7e2eaf1674fc99eb.vafCq3oTsBE1NKLCz1AtHvx"
+      }
+    },
+    {
+      "providerName": "CustomEntities",
+      "bundleOptions": {
+        "hash": "CDeSho+SEXQ0KZe33j037v1pL4YoYOj9YgBXaa+2qoM64aXgYwdbkWGJGAOI650hhooFmzewy0w1ligQZbT+Ew==",
+        "bundleName": "Ca42d0ccba0a8400984214514d0708e08_x_uipa_mfs_manufac_field_service_incidents",
+        "entitiesBundle": {
+          "Types": {
+            "x_uipa_mfs_manufac_field_service_incidents": {
+              "name": "x_uipa_mfs_manufac_field_service_incidents",
+              "properties": [
+                {
+                  "name": "identifiedissue",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "notes",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "serialnumber",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "sys_mod_count",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.Int32, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "technician",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "sys_updated_on",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "repairdate",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "resolution",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "sys_class_name",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "number",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "spareparts",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "sys_id",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "sys_updated_by",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "sys_created_on",
+                  "type": {
+                    "ClrType": "System.Nullable`1[[System.DateTimeOffset, System.Private.CoreLib]], System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "caseid",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "issuedescription",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "model",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "customername",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "sys_created_by",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "name": "status",
+                  "type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  }
+                }
+              ],
+              "baseType": {}
+            }
+          },
+          "version": 1
+        }
+      },
+      "entityAssemblyKey": {
+        "name": "UiPath.ServiceNow.IntegrationService.Activities.SWEntities.Ca42d0ccba0a8400984214514d0708e08_x_uipa_mfs_manufac_field_service_incidents",
+        "hash": "Q0RlU2hvK1NFWFEwS1plMzNqMDM3djFwTDRZb1lPajlZZ0JYYWErMnFvTTY0YVhnWXdkYmtXR0pHQU9JNjUwaGhvb0ZtemV3eTB3MWxpZ1FaYlQrRXc9PQ",
+        "assemblyName": "Ca42d0ccba0a84009842.KPujc16OZMJ1vh9BD4ON5ax1"
+      }
+    }
+  ]
+}

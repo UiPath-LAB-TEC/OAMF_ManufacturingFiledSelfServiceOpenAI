@@ -1,0 +1,280 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SAP_CreateRequest" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="o_RequestNumber" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1150,3828</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SAP_CreateRequest_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="36">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="82">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="SAP_CreateRequest" sap:VirtualizedContainerService.HintSize="496,3763.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,96" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Create Request in SAP&quot;]" />
+    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="[Config(&quot;TransactionCode1&quot;).ToString]">
+      <ucas:CallTransaction.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5df1a6ae-c95c-4519-a08d-e9f9e9a0e389" InformativeScreenshot="150d51831516fd113be7a8fa485c3004" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ucas:CallTransaction.Target>
+    </ucas:CallTransaction>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Create Order: Initial Screen" sap:VirtualizedContainerService.HintSize="434,1363.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="933c40ba-d4fd-484c-a1ed-0ba15491874d" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1066" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Order Type" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="933c40ba-d4fd-484c-a1ed-0ba15491874d" Text="YBA1" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="208, 326, 110, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Order'" FullSelectorArgument="&lt;sap id='usr/ctxtAUFPAR-PM_AUFART' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtAUFPAR-PM_AUFART' /&gt;" Guid="fdab9788-7aea-47c6-8217-b0cce1db1c03" InformativeScreenshot="a37ccbb9b5af6144a03353ab71479140.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Order: Initial Screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'ComboBox  Priority'" sap:VirtualizedContainerService.HintSize="338,162" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="3-Medium">
+              <ucas:SelectMenuItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="8">
+                  <x:String>1-Very high</x:String>
+                  <x:String>2-High</x:String>
+                  <x:String>3-Medium</x:String>
+                  <x:String>4-Low</x:String>
+                  <x:String xml:space="preserve"> </x:String>
+                </scg:List>
+              </ucas:SelectMenuItem.Items>
+              <ucas:SelectMenuItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b1b8f031-70ab-48cf-8302-5ed8c8b4e198" InformativeScreenshot="00debab23a92bfaaec8d61d65dd18205" Selector="&lt;sap id='usr/cmbCAUFVD-PRIOK' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ucas:SelectMenuItem.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ucas:SelectMenuItem>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Plng Plant" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="933c40ba-d4fd-484c-a1ed-0ba15491874d" Text="1010" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="208, 566, 74, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Maintenance'" FullSelectorArgument="&lt;sap id='usr/ctxtCAUFVD-IWERK' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtCAUFVD-IWERK' /&gt;" Guid="fce9e551-dd06-44d2-9a56-687ffab51c10" InformativeScreenshot="cc3171b74ba5913ad4bcd22fb7b7435e.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Order: Initial Screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Bus. Area" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="933c40ba-d4fd-484c-a1ed-0ba15491874d" Text="0001[k(enter)]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="208, 614, 74, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Business Area'" FullSelectorArgument="&lt;sap id='usr/ctxtCAUFVD-GSBER' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtCAUFVD-GSBER' /&gt;" Guid="a208e4b0-5cb7-41dd-ac64-607ac692ccc3" InformativeScreenshot="518c4ff0e5c7cba99f9cfb23d25782d7.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Order: Initial Screen' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="1, 0, 1919, 1020" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIKSURBVGhD7ZhLSwJRGIaNVv2OFhH9A3OhNUVtgpb9hMBKXZWl2KJVi+7RzaAiNZ0uELXIxURhLlqUtXDZKgq6gwTR4us7EyM2DnO6OHM4cYRnK+/z+c6r6ACAKp4RAqwRAqwRAqwRAqwRAqz5HwJNQ3IXssYbzSG5WxMYRYAj3pFdFKjnVWBXCm3WlVaIJ4EMuTzJzZsAqc22FJZrtfC8CaSl8Gdtvgjk8/ma9sjWlGcwBSwwCKqHXD6NtWnQh1cFrm/vognl8iESOwG7CK4eQ+fIDgokjQLrwdqUX17D8VR4A7vZUHLQEY6BeyBuFLiUjL7zemwVuH0sQOzgFCTfDLj8URRIGIUmFHfeKHQptgncPb/Cyl4WWn3T0Ni3AO7+uNkzUNx5GrYJbCpnIPVOgrNnDsPHzMJ/2XkalgvcYG1W9rPg8U7g5RfNLm+48zQsFyDh2wIz0Ng7XxLeUMBw52lYJkA6T2rj6SGXJ53XalMW3nTnaTjuX17Xj3JX+dThBaSU84oxnlSgxY+X9y3RHljTnafhwFc1XmjMiR+x0ztbOfBhdQWW1a03qQ1152mov4XcweSoO7ih7nLFwPcj37QmtfnWztNg9WPu2ztPg4XAj3aehp0Cv9p5GnYK/Grnadgh8Kedp6EJWPe3SkgetuLyGqoAzwgB1ggB1ggB1ggB1ggB1nAuAFUfxIfXPEuuE9oAAAAASUVORK5CYII=" InformativeScreenshot="89bcb77ee74188e6c4ed9a62a7373e1b.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Order: Initial Screen' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Create Corrective Maintenance : Central Header" sap:VirtualizedContainerService.HintSize="434,1911.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="cc39d444-1acc-43f0-a237-6e8d4d0a800f" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1614" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="Status" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Planner Grp'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="cc39d444-1acc-43f0-a237-6e8d4d0a800f" Text="920" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="223, 518, 59, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Planner'" FullSelectorArgument="&lt;sap id='usr/subSUB_ALL:SAPLCOIH:3001/ssubSUB_LEVEL:SAPLCOIH:1100/tabsTS_1100/tabpIHKZ/ssubSUB_AUFTRAG:SAPLCOIH:1120/subHEADER:SAPLCOIH:0154/ctxtCAUFVD-INGPR' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUB_ALL:SAPLCOIH:3001/ssubSUB_LEVEL:SAPLCOIH:1100/tabsTS_1100/tabpIHKZ/ssubSUB_AUFTRAG:SAPLCOIH:1120/subHEADER:SAPLCOIH:0154/ctxtCAUFVD-INGPR' /&gt;" Guid="29d4ff00-d5dc-4b25-a4a8-a7fe7f5e11c1" InformativeScreenshot="1f34fd4e41a2139dc2a4a7c5c6359fc0.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Corrective Maintenance : Central Header' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into Mn.wk.ctr" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="cc39d444-1acc-43f0-a237-6e8d4d0a800f" Text="DISCR_MF" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="223, 566, 134, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Main'" FullSelectorArgument="&lt;sap id='usr/subSUB_ALL:SAPLCOIH:3001/ssubSUB_LEVEL:SAPLCOIH:1100/tabsTS_1100/tabpIHKZ/ssubSUB_AUFTRAG:SAPLCOIH:1120/subHEADER:SAPLCOIH:0154/ctxtCAUFVD-VAPLZ' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUB_ALL:SAPLCOIH:3001/ssubSUB_LEVEL:SAPLCOIH:1100/tabsTS_1100/tabpIHKZ/ssubSUB_AUFTRAG:SAPLCOIH:1120/subHEADER:SAPLCOIH:0154/ctxtCAUFVD-VAPLZ' /&gt;" Guid="28a987d5-1eac-4678-a165-493f37a6c58b" InformativeScreenshot="696409541eb7f232b8e4b4c09478f757.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Corrective Maintenance : Central Header' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into rson respons" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="cc39d444-1acc-43f0-a237-6e8d4d0a800f" Text="00000010" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="223, 614, 194, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'00000010'" FullSelectorArgument="&lt;sap id='usr/subSUB_ALL:SAPLCOIH:3001/ssubSUB_LEVEL:SAPLCOIH:1100/tabsTS_1100/tabpIHKZ/ssubSUB_AUFTRAG:SAPLCOIH:1120/subHEADER:SAPLCOIH:0154/subPARTNER:SAPLIPAR:0421/ctxtDIIHPA-I_PARNR' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/subSUB_ALL:SAPLCOIH:3001/ssubSUB_LEVEL:SAPLCOIH:1100/tabsTS_1100/tabpIHKZ/ssubSUB_AUFTRAG:SAPLCOIH:1120/subHEADER:SAPLCOIH:0154/subPARTNER:SAPLIPAR:0421/ctxtDIIHPA-I_PARNR' /&gt;" Guid="51896022-12da-4a60-a760-ebc907378945" InformativeScreenshot="c8d4cfb547f0adceb4f45fe52c0055cd.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Corrective Maintenance : Central Header' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="338,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="cc39d444-1acc-43f0-a237-6e8d4d0a800f" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="1757, 928, 62, 40" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[11]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[11]' check:text='Save' /&gt;" Guid="fa046e8a-d891-4b1b-8f35-19c34d538317" InformativeScreenshot="5624f924723f5abf778474c58dbccf67.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Corrective Maintenance : Central Header' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Status Bar 'Statusbar Order'" sap:VirtualizedContainerService.HintSize="338,271.3333333333333" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[Status]">
+              <ucas:ReadStatusbar.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a2e907d5-73c5-4e4b-9f17-80c27b0df0ab" InformativeScreenshot="d48f9caf1537435dd5f6de4ae147bdcc" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Corrective Maintenance: Initial Screen' /&gt;&lt;sap id='sbar' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ucas:ReadStatusbar.Target>
+            </ucas:ReadStatusbar>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[Status]" />
+            <Assign DisplayName="Assign Request Number" sap:VirtualizedContainerService.HintSize="338,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[o_RequestNumber]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Split(Status,"number")(1)]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1042" FilePath="C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIKSURBVGhD7ZhLSwJRGIaNVv2OFhH9A3OhNUVtgpb9hMBKXZWl2KJVi+7RzaAiNZ0uELXIxURhLlqUtXDZKgq6gwTR4us7EyM2DnO6OHM4cYRnK+/z+c6r6ACAKp4RAqwRAqwRAqwRAqwRAqz5HwJNQ3IXssYbzSG5WxMYRYAj3pFdFKjnVWBXCm3WlVaIJ4EMuTzJzZsAqc22FJZrtfC8CaSl8Gdtvgjk8/ma9sjWlGcwBSwwCKqHXD6NtWnQh1cFrm/vognl8iESOwG7CK4eQ+fIDgokjQLrwdqUX17D8VR4A7vZUHLQEY6BeyBuFLiUjL7zemwVuH0sQOzgFCTfDLj8URRIGIUmFHfeKHQptgncPb/Cyl4WWn3T0Ni3AO7+uNkzUNx5GrYJbCpnIPVOgrNnDsPHzMJ/2XkalgvcYG1W9rPg8U7g5RfNLm+48zQsFyDh2wIz0Ng7XxLeUMBw52lYJkA6T2rj6SGXJ53XalMW3nTnaTjuX17Xj3JX+dThBaSU84oxnlSgxY+X9y3RHljTnafhwFc1XmjMiR+x0ztbOfBhdQWW1a03qQ1152mov4XcweSoO7ih7nLFwPcj37QmtfnWztNg9WPu2ztPg4XAj3aehp0Cv9p5GnYK/Grnadgh8Kedp6EJWPe3SkgetuLyGqoAzwgB1ggB1ggB1ggB1ggB1nAuAFUfxIfXPEuuE9oAAAAASUVORK5CYII=" InformativeScreenshot="ea82a0c7b6f734e9da6d45156f21e4b8.png" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Create Corrective Maintenance : Central Header' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
