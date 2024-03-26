@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>881.3333333333334,3657.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>632,3644.5</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SAP_SparePartsInfo_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="84">
@@ -114,7 +114,7 @@
       <AssemblyReference>UiPathTeam.Interactive.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Fetch Tools details from SAP&#xA;" DisplayName="SAP_SparePartsInfo" sap:VirtualizedContainerService.HintSize="642,3592.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Fetch Tools details from SAP&#xA;" DisplayName="SAP_SparePartsInfo" sap:VirtualizedContainerService.HintSize="642,3579.5" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DT_Tools" />
       <Variable x:TypeArguments="x:String" Name="Tools_ManufSerialNo" />
@@ -125,7 +125,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="Black" Hide="4000" sap:VirtualizedContainerService.HintSize="580,128.66666666666666" sap2010:WorkflowViewState.IdRef="DisplayMessage_1" Message="Retrieving tool-specific information from SAP" NewStyle="True" Position="BottomRight" Preset="Custom">
+    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="Black" Hide="4000" sap:VirtualizedContainerService.HintSize="580,125" sap2010:WorkflowViewState.IdRef="DisplayMessage_1" Message="Retrieving tool-specific information from SAP" NewStyle="True" Position="BottomRight" Preset="Custom">
       <uia:DisplayMessage.Opacity>
         <InArgument x:TypeArguments="s:Nullable(x:Double)">
           <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8">
@@ -136,10 +136,10 @@
         </InArgument>
       </uia:DisplayMessage.Opacity>
     </uia:DisplayMessage>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="580,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Fetching Tools Details from SAP&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="580,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Fetching Tools Details from SAP&quot;]" />
     <ui:BuildDataTable DataTable="[o_dt_ToolsInfo]" DisplayName="Build Data Table for Tools" sap:VirtualizedContainerService.HintSize="580,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Manuf_x0020_SerialNo&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Manuf_x0020_Part_x0020_No.&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Guaranty_x0020__x0020_Start&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Guaranty_x0020_End_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
     <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[DT_Tools]" DisplayName="Read Range Workbook tools Sheet" sap:VirtualizedContainerService.HintSize="580,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Tools" WorkbookPath="Data\Config.xlsx" />
-    <ui:FilterDataTable DataTable="[DT_Tools]" DisplayName="Filter Data Table on basis of Error code" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="580,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT_Tools]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable DataTable="[DT_Tools]" DisplayName="Filter Data Table on basis of Error code" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="580,163" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT_Tools]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
@@ -158,9 +158,9 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="580,162" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="IE02">
+    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="580,161" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="IE02">
       <ucas:CallTransaction.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3d8dc3d8-777a-47df-8569-4f8608a2fdcb" InformativeScreenshot="420671df99f0e7de15ebbb3c8b724887" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3d8dc3d8-777a-47df-8569-4f8608a2fdcb" InformativeScreenshot="420671df99f0e7de15ebbb3c8b724887" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access*' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -170,7 +170,7 @@
         </ui:Target>
       </ucas:CallTransaction.Target>
     </ucas:CallTransaction>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Display Material (Initial Screen)" sap:VirtualizedContainerService.HintSize="580,2498" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="23dc072b-0ccf-40c0-95c0-aab92b745072" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Display Material (Initial Screen)" sap:VirtualizedContainerService.HintSize="580,2493.5" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="23dc072b-0ccf-40c0-95c0-aab92b745072" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>

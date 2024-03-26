@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,1601</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>483.20000000000005,1677.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Salesforce_GetAccountDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="84">
@@ -114,7 +114,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Get contact details from Salesforce&#xA;" DisplayName="Salesforce_GetAccountDetails" sap:VirtualizedContainerService.HintSize="493,1536" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Get contact details from Salesforce&#xA;" DisplayName="Salesforce_GetAccountDetails" sap:VirtualizedContainerService.HintSize="493.2,1612.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="usiascb:Contact" Name="ContactRecord" />
       <Variable x:TypeArguments="usiascb1:curated_contact" Name="ContactDetails" />
@@ -125,17 +125,17 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="Black" Hide="6000" sap:VirtualizedContainerService.HintSize="431,124" sap2010:WorkflowViewState.IdRef="DisplayMessage_1" Message="Retrieving user-specific information from Salesforce" NewStyle="True" Position="BottomRight" Preset="Custom">
+    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="Black" Hide="6000" sap:VirtualizedContainerService.HintSize="431.2,126" sap2010:WorkflowViewState.IdRef="DisplayMessage_1" Message="Retrieving user-specific information from Salesforce" NewStyle="True" Position="BottomRight" Preset="Custom">
       <uia:DisplayMessage.Opacity>
         <InArgument x:TypeArguments="s:Nullable(x:Double)">
           <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8" />
         </InArgument>
       </uia:DisplayMessage.Opacity>
     </uia:DisplayMessage>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Getting Contact Details from SFDC&quot;]" />
-    <usia:SearchUsingSOQL ActivityInstanceId="b546cbe4-c3a1-44dd-ac4d-683dbf370380" BindingsVersion="2.1" BusinessEntityName="Contact" ConfiguredBusinessEntity="" ConnectionId="2eb7e2ea-f167-4fc9-9ebd-6b673dbae247" Connector="uipath-salesforce-sfdc" CrudOperation="Search" DesignConnectionEnabled="True" DisplayName="Search Records" sap:VirtualizedContainerService.HintSize="431,225" sap2010:WorkflowViewState.IdRef="SearchUsingSOQL_1" UseRawCEQL="False">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431.2,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Getting Contact Details from SFDC&quot;]" />
+    <usia:SearchUsingSOQL ActivityInstanceId="b546cbe4-c3a1-44dd-ac4d-683dbf370380" BindingsVersion="2.1" BusinessEntityName="Contact" ConfiguredBusinessEntity="" ConnectionId="ebda13ee-9300-46ab-b320-cc7d61540a0a" Connector="uipath-salesforce-sfdc" CrudOperation="Search" DesignConnectionEnabled="True" DisplayName="Search Records" sap:VirtualizedContainerService.HintSize="431.2,260" sap2010:WorkflowViewState.IdRef="SearchUsingSOQL_1" UseRawCEQL="False">
       <usia:SearchUsingSOQL.BusinessEntity>
-        <uibi:BusinessEntity Name="Contact">
+        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID0}" Name="Contact">
           <uibi:BusinessEntity.AllFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="13">
               <uiisi:OperationEntityField x:TypeArguments="x:Int32" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The maximum number of records to return." DisplayName="Max records" FormDataType="ExpressionTextBox" InArgumentValue="1" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="maximumRecordsReturned" ShouldFilterOnChange="False">
@@ -171,16 +171,17 @@
             </scg:List>
           </uibi:BusinessEntity.AllFields>
           <uibi:BusinessEntity.EntityMetadata>
-            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID0}" DisplayName="Contact" EligibleOperations="64" IsCustomEntity="False" Name="Contact" />
+            <uibi:EntityMetadata DisplayName="Contact" EligibleOperations="64" IsCustomEntity="False" Name="Contact">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                  <x:String x:Key="Object">Contact</x:String>
+                  <x:String x:Key="FullPath">/Contact</x:String>
+                  <x:String x:Key="Method">GET</x:String>
+                  <x:Null x:Key="BaseObject" />
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
           </uibi:BusinessEntity.EntityMetadata>
-          <uibi:BusinessEntity.Metadata>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
-              <x:String x:Key="Object">Contact</x:String>
-              <x:String x:Key="FullPath">/Contact</x:String>
-              <x:String x:Key="Method">GET</x:String>
-              <x:Null x:Key="BaseObject" />
-            </scg:Dictionary>
-          </uibi:BusinessEntity.Metadata>
           <uibi:BusinessEntity.SearchableFields>
             <scg:List x:TypeArguments="uibi:SearchableField" Capacity="78">
               <uibi:SearchableField Mask="{x:Null}" DisplayName="Account ID" InputType="x:String" Name="AccountId" QueryType="x:String">
@@ -862,7 +863,7 @@
         <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)" />
       </usia:SearchUsingSOQL.CachedLookupValues>
       <usia:SearchUsingSOQL.DesignConnectionRequest>
-        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="2eb7e2ea-f167-4fc9-9ebd-6b673dbae247" ConnectionName="uipathlabs@gmail.com" ConnectorKey="uipath-salesforce-sfdc">
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="ebda13ee-9300-46ab-b320-cc7d61540a0a" ConnectionName="uipathlabs@gmail.com #2" ConnectorKey="uipath-salesforce-sfdc">
           <uiisi:ConnectionParameters.TelemetryInfo>
             <uiisi:TelemetryInfo ActivityPack="UiPath.Salesforce.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
           </uiisi:ConnectionParameters.TelemetryInfo>
@@ -900,9 +901,9 @@
         <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
       </usia:SearchUsingSOQL.TelemetryProperties>
     </usia:SearchUsingSOQL>
-    <usia:GetContactByID ActivityInstanceId="9f4533ef-99a9-4fae-a6e2-ed141d643851" BindingsVersion="2.1" BusinessEntityName="Contact" ConfiguredBusinessEntity="curated_contact" ConnectionId="2eb7e2ea-f167-4fc9-9ebd-6b673dbae247" Connector="uipath-salesforce-sfdc" CrudOperation="Get" DesignConnectionEnabled="True" DisplayName="Get Contact" sap:VirtualizedContainerService.HintSize="431,121" sap2010:WorkflowViewState.IdRef="GetContactByID_1">
+    <usia:GetContactByID ActivityInstanceId="9f4533ef-99a9-4fae-a6e2-ed141d643851" BindingsVersion="2.1" BusinessEntityName="Contact" ConfiguredBusinessEntity="curated_contact" ConnectionId="ebda13ee-9300-46ab-b320-cc7d61540a0a" Connector="uipath-salesforce-sfdc" CrudOperation="Get" DesignConnectionEnabled="True" DisplayName="Get Contact" sap:VirtualizedContainerService.HintSize="431.2,154.4" sap2010:WorkflowViewState.IdRef="GetContactByID_1">
       <usia:GetContactByID.BusinessEntity>
-        <uibi:BusinessEntity Name="curated_contact">
+        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID10}" Name="curated_contact">
           <uibi:BusinessEntity.AllFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="2">
               <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID11" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Type the name or ID of the contact to retrieve. ID of the contact can also be retrieved from the event trigger output" DisplayName="Contact" FormDataType="ExpressionTextBox" InArgumentValue="[ContactRecord.Id]" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Path" Name="curated_contactId" ShouldFilterOnChange="False">
@@ -934,16 +935,17 @@
             </scg:List>
           </uibi:BusinessEntity.AllFields>
           <uibi:BusinessEntity.EntityMetadata>
-            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID10}" DisplayName="Contact" EligibleOperations="2" IsCustomEntity="False" Name="curated_contact" />
+            <uibi:EntityMetadata DisplayName="Contact" EligibleOperations="2" IsCustomEntity="False" Name="curated_contact">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID10">
+                  <x:String x:Key="Object">curated_contact</x:String>
+                  <x:String x:Key="FullPath">/curated_contact/{curated_contactId}</x:String>
+                  <x:String x:Key="Method">GET</x:String>
+                  <x:String x:Key="BaseObject">contact</x:String>
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
           </uibi:BusinessEntity.EntityMetadata>
-          <uibi:BusinessEntity.Metadata>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID10">
-              <x:String x:Key="Object">curated_contact</x:String>
-              <x:String x:Key="FullPath">/curated_contact/{curated_contactId}</x:String>
-              <x:String x:Key="Method">GET</x:String>
-              <x:String x:Key="BaseObject">contact</x:String>
-            </scg:Dictionary>
-          </uibi:BusinessEntity.Metadata>
           <uibi:BusinessEntity.SelectedFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
               <x:Reference>__ReferenceID11</x:Reference>
@@ -961,7 +963,7 @@
         </scg:Dictionary>
       </usia:GetContactByID.CachedLookupValues>
       <usia:GetContactByID.DesignConnectionRequest>
-        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="2eb7e2ea-f167-4fc9-9ebd-6b673dbae247" ConnectionName="uipathlabs@gmail.com" ConnectorKey="uipath-salesforce-sfdc">
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="ebda13ee-9300-46ab-b320-cc7d61540a0a" ConnectionName="uipathlabs@gmail.com #2" ConnectorKey="uipath-salesforce-sfdc">
           <uiisi:ConnectionParameters.TelemetryInfo>
             <uiisi:TelemetryInfo ActivityPack="UiPath.Salesforce.IntegrationService.Activities" ActivityPackVersion="6.1.0" Source="StudioDesktop" />
           </uiisi:ConnectionParameters.TelemetryInfo>
@@ -977,7 +979,7 @@
         <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
       </usia:GetContactByID.TelemetryProperties>
     </usia:GetContactByID>
-    <ui:MultipleAssign DisplayName="Multiple Assign of Contacts" sap:VirtualizedContainerService.HintSize="431,194" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="Multiple Assign of Contacts" sap:VirtualizedContainerService.HintSize="431.2,194.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">

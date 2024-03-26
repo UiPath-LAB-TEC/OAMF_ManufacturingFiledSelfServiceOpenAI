@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,4410</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>730,4793</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SAP_SparePartsInfo_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
@@ -123,7 +123,7 @@
       <AssemblyReference>UiPathTeam.Interactive.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="1. Fetch Spare parts details from SAP&#xA;" DisplayName="SAP_SparePartsInfo" sap:VirtualizedContainerService.HintSize="644,4345" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="1. Fetch Spare parts details from SAP&#xA;" DisplayName="SAP_SparePartsInfo" sap:VirtualizedContainerService.HintSize="740,4728" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="DT_SpareParts" />
     </Sequence.Variables>
@@ -133,17 +133,17 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="black" Hide="4000" sap:VirtualizedContainerService.HintSize="582,124" sap2010:WorkflowViewState.IdRef="DisplayMessage_1" Message="Retrieving specific information about spare parts from SAP" NewStyle="True" Position="BottomRight" Preset="Custom">
+    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="black" Hide="4000" sap:VirtualizedContainerService.HintSize="678,125" sap2010:WorkflowViewState.IdRef="DisplayMessage_1" Message="Retrieving specific information about spare parts from SAP" NewStyle="True" Position="BottomRight" Preset="Custom">
       <uia:DisplayMessage.Opacity>
         <InArgument x:TypeArguments="s:Nullable(x:Double)">
           <Literal x:TypeArguments="s:Nullable(x:Double)" Value="0.8" />
         </InArgument>
       </uia:DisplayMessage.Opacity>
     </uia:DisplayMessage>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="582,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Fetching Spare Parts Details from SAP&quot;]" />
-    <ui:BuildDataTable DataTable="[o_dt_SparePartsInfo]" DisplayName="Build Spare Parts Data Table" sap:VirtualizedContainerService.HintSize="582,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Product_x0020_Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Quantity&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Gross_x0020_Weight&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[DT_SpareParts]" DisplayName="Read Range Product Sheet" sap:VirtualizedContainerService.HintSize="582,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Product" WorkbookPath="Data\Config.xlsx" />
-    <ui:FilterDataTable DataTable="[DT_SpareParts]" DisplayName="Filter Data Table on basis of Error code" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="582,161" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT_SpareParts]" SelectColumnsMode="Keep">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="678,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Fetching Spare Parts Details from SAP&quot;]" />
+    <ui:BuildDataTable DataTable="[o_dt_SparePartsInfo]" DisplayName="Build Spare Parts Data Table" sap:VirtualizedContainerService.HintSize="678,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Product_x0020_Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Quantity&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Gross_x0020_Weight&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[DT_SpareParts]" DisplayName="Read Range Product Sheet" sap:VirtualizedContainerService.HintSize="678,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Product" WorkbookPath="Data\Config.xlsx" />
+    <ui:FilterDataTable DataTable="[DT_SpareParts]" DisplayName="Filter Data Table on basis of Error code" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="678,163" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[DT_SpareParts]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="CONTAINS">
@@ -162,9 +162,9 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="582,160" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="[in_Config(&quot;TransactionCode2&quot;).ToString]">
+    <ucas:CallTransaction DisplayName="Call Transaction 'saplogon.exe SAP'" sap:VirtualizedContainerService.HintSize="678,161" sap2010:WorkflowViewState.IdRef="CallTransaction_1" Transaction="[in_Config(&quot;TransactionCode2&quot;).ToString]">
       <ucas:CallTransaction.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3d8dc3d8-777a-47df-8569-4f8608a2fdcb" InformativeScreenshot="420671df99f0e7de15ebbb3c8b724887" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3d8dc3d8-777a-47df-8569-4f8608a2fdcb" InformativeScreenshot="420671df99f0e7de15ebbb3c8b724887" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='SAP Easy Access*' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -174,25 +174,25 @@
         </ui:Target>
       </ucas:CallTransaction.Target>
     </ucas:CallTransaction>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Display Material (Initial Screen)" sap:VirtualizedContainerService.HintSize="582,3145" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="23dc072b-0ccf-40c0-95c0-aab92b745072" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Display Material (Initial Screen)" sap:VirtualizedContainerService.HintSize="678,3520" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="23dc072b-0ccf-40c0-95c0-aab92b745072" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="548,2854" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="644,3227" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_SpareParts]" DisplayName="For Each Row in Spare PartsData Table" sap:VirtualizedContainerService.HintSize="486,2352" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_SpareParts]" DisplayName="For Each Row in Spare PartsData Table" sap:VirtualizedContainerService.HintSize="582,2725" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,2235" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="548,2608" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="SparePartsQuantity" />
                       <Variable x:TypeArguments="x:String" Name="SparePartsGrossWeight" />
@@ -203,7 +203,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into Materials" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" Text="[CurrentRow(&quot;Code&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Double" DisplayName="Type Into Materials" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="486,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" Text="[CurrentRow(&quot;Code&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="283, 278, 650, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'RM2_CP'" FullSelectorArgument="&lt;sap id='usr/ctxtRMMG1-MATNR' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtRMMG1-MATNR' /&gt;" Guid="14d264bc-318e-40f7-8b44-ac60e9b8fde5" InformativeScreenshot="e0e68a72d1bd56c3cd967d839aac781e.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Display Material (Initial Screen)' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                       </uix:NTypeInto.Target>
@@ -214,7 +214,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'TableRow'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" Version="V3">
+                    <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'TableRow'" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" Version="V3">
                       <uix:NCheck.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="32, 158, 38, 36" DesignTimeScaleFactor="1.5" FriendlyName="'TableRow'" FullSelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tblSAPLMGMMTC_VIEW' /&gt;" Guid="55598b9d-819f-4685-90dd-405cfc7797b3" InformativeScreenshot="c69e315ca13e08dfdf06bb59b5f73824.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Select View(s)' idx='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                       </uix:NCheck.Target>
@@ -225,7 +225,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NCheck>
-                    <uix:NClick ClickType="Single" DisplayName="Click 'Button Continue (Enter)'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" Version="V3">
+                    <uix:NClick ClickType="Single" DisplayName="Click 'Button Continue (Enter)'" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="169, 839, 39, 39" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Button Continue (Enter)'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[0]' /&gt;" Guid="8c7bc221-2346-489d-8f5c-bfc1fa1aa7e7" InformativeScreenshot="de7000c72d354e2a97b5bdcba916fb72.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Select View(s)' idx='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                       </uix:NClick.Target>
@@ -236,7 +236,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NClick>
-                    <uix:NGetText DisplayName="Get Text Material Description" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" TextString="[SpareProductDescription]" Version="V3">
+                    <uix:NGetText DisplayName="Get Text Material Description" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" TextString="[SpareProductDescription]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="208, 374, 614, 39" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'CP-RM2, Rolling Bearing'" FullSelectorArgument="&lt;sap id='usr/tabsTABSPR1/tabpSP01/ssubTABFRA1:SAPLMGMM:2004/subSUB1:SAPLMGD1:1002/txtMAKT-MAKTX' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTABSPR1/tabpSP01/ssubTABFRA1:SAPLMGMM:2004/subSUB1:SAPLMGD1:1002/txtMAKT-MAKTX' /&gt;" Guid="bdfa1810-dd94-499f-8ee3-73131bc891e6" InformativeScreenshot="92e3fe44dea283a4fa2e876351df0a57.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Display Material RM2_CP (Raw materials)' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                       </uix:NGetText.Target>
@@ -247,7 +247,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <uix:NGetText DisplayName="Get Text 'Gross Weight'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" TextString="[SparePartsGrossWeight]" Version="V3">
+                    <uix:NGetText DisplayName="Get Text 'Gross Weight'" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" TextString="[SparePartsGrossWeight]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="373, 710, 269, 39" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'5.500'" FullSelectorArgument="&lt;sap id='usr/tabsTABSPR1/tabpSP01/ssubTABFRA1:SAPLMGMM:2004/subSUB4:SAPLMGD1:2007/txtMARA-BRGEW' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTABSPR1/tabpSP01/ssubTABFRA1:SAPLMGMM:2004/subSUB4:SAPLMGD1:2007/txtMARA-BRGEW' /&gt;" Guid="25f0ece9-4df9-4402-9578-1f046715c644" InformativeScreenshot="5a95664409ac3a697075331bbefd4f15.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Display Material RM2_CP (Raw materials)' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                       </uix:NGetText.Target>
@@ -258,7 +258,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'Stor. loc. stck'" sap:VirtualizedContainerService.HintSize="388,160" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Stor. loc. stck">
+                    <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'Stor. loc. stck'" sap:VirtualizedContainerService.HintSize="486,160" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="Stor. loc. stck">
                       <ucas:SelectMenuItem.Items>
                         <scg:List x:TypeArguments="x:String" Capacity="32">
                           <x:String xml:space="preserve"> Basic data 1</x:String>
@@ -308,7 +308,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </ucas:SelectMenuItem>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Stor. Loc.'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,222.66666666666666" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" Text="[CurrentRow(&quot;Stock Code&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Stor. Loc.'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="486,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" Text="[CurrentRow(&quot;Stock Code&quot;).ToString + &quot;[k(enter)]&quot;]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="287, 210, 74, 39" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'CTextField Storage'" FullSelectorArgument="&lt;sap id='usr/ctxtRMMG1-LGORT' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/ctxtRMMG1-LGORT' /&gt;" Guid="9665dd99-e34b-4571-929d-24bd8b55fe68" InformativeScreenshot="a0d52a48cbb85b8a3f294be18004d452.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='#32770' title='Organizational Levels' idx='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                       </uix:NTypeInto.Target>
@@ -319,7 +319,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NGetText DisplayName="Get Text Quantity" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" TextString="[SparePartsQuantity]" Version="V3">
+                    <uix:NGetText DisplayName="Get Text Quantity" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" TextString="[SparePartsQuantity]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="373, 710, 239, 39" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'1.00000'" FullSelectorArgument="&lt;sap id='usr/tabsTABSPR1/tabpSP32/ssubTABFRA1:SAPLMGMM:2000/subSUB2:SAPLMGD1:3001/txtV01CWS-BSKRF' /&gt;" FuzzySelectorArgument="&lt;sap id='usr/tabsTABSPR1/tabpSP32/ssubTABFRA1:SAPLMGMM:2000/subSUB2:SAPLMGD1:3001/txtV01CWS-BSKRF' /&gt;" Guid="53fccfbd-3f98-435e-bcf7-0ea39dabfceb" InformativeScreenshot="fdce3d88cc5b49f634dde6518ef8b858.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Display Material RM2_CP (Raw materials)' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                       </uix:NGetText.Target>
@@ -330,15 +330,31 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{SpareProductDescription,SparePartsQuantity,SparePartsGrossWeight}]" DataTable="[o_dt_SparePartsInfo]" DisplayName="Add Data Row into Data Table" sap:VirtualizedContainerService.HintSize="388,186" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts Close SAP Page" sap:VirtualizedContainerService.HintSize="388,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(f3)][u(hk)][d(hk)][k(f3)][u(hk)]" Version="V3">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </uix:NKeyboardShortcuts>
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{SpareProductDescription,SparePartsQuantity,SparePartsGrossWeight}]" DataTable="[o_dt_SparePartsInfo]" DisplayName="Add Data Row into Data Table" sap:VirtualizedContainerService.HintSize="486,186" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                    <uix:NClick ClickType="Single" ContinueOnError="False" DisplayName="Click 'Exit'" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="23dc072b-0ccf-40c0-95c0-aab92b745072" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="697, 91, 33, 26" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Exit'" FullSelectorArgument="&lt;sap id='tbar[0]/btn[15]' /&gt;" FuzzySelectorArgument="&lt;sap id='tbar[0]/btn[15]' check:text='Exit' /&gt;" Guid="db5aa1e0-c546-43e9-8839-64e93c047d55" InformativeScreenshot="e21ba46c79b8651a764de8d8ad1375bd.png" ScopeSelectorArgument="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Display Material (Initial Screen)' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,369" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,290" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts Close SAP Page" sap:VirtualizedContainerService.HintSize="388,179" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][k(f3)][u(hk)][d(hk)][k(f3)][u(hk)]" Version="V3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </uix:NKeyboardShortcuts>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
                   </Sequence>
                 </ActivityAction>
               </ui:ForEachRow.Body>
@@ -349,7 +365,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ForEachRow>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,347" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="582,347" sap2010:WorkflowViewState.IdRef="CommentOut_1">
               <ui:CommentOut.Body>
                 <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
@@ -378,7 +394,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <Assign DisplayName="Assign Spare Parts" sap:VirtualizedContainerService.HintSize="582,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign DisplayName="Assign Spare Parts" sap:VirtualizedContainerService.HintSize="678,82" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[o_SpareParts]</OutArgument>
       </Assign.To>

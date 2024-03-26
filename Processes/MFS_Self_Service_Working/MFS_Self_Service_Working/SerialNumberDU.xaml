@@ -4,7 +4,7 @@
     <x:Property Name="in_docPath" Type="InArgument(x:String)" />
     <x:Property Name="in_APIKey" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>538.6666666666666,2589.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>850,2353.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="116">
@@ -143,7 +143,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SerialNumber DU " sap:VirtualizedContainerService.HintSize="548.6666666666666,2524.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="SerialNumber DU " sap:VirtualizedContainerService.HintSize="540.4,2288.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="doc_Text" />
       <Variable x:TypeArguments="p5:Document" Name="dom" />
@@ -158,22 +158,22 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="486.6666666666667,92" sap2010:WorkflowViewState.IdRef="Delay_3" />
-    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="Black" Hide="6000" sap:VirtualizedContainerService.HintSize="486.6666666666667,128.66666666666666" sap2010:WorkflowViewState.IdRef="DisplayMessage_4" Message="Serial Number detection started from the attched image" NewStyle="False" Position="BottomCenter" Preset="Custom">
+    <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="478.4,91.2" sap2010:WorkflowViewState.IdRef="Delay_3" />
+    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="Black" Hide="6000" sap:VirtualizedContainerService.HintSize="478.4,125.2" sap2010:WorkflowViewState.IdRef="DisplayMessage_4" Message="Serial Number detection started from the attched image" NewStyle="False" Position="BottomCenter" Preset="Custom">
       <uia:DisplayMessage.Opacity>
         <InArgument x:TypeArguments="s:Nullable(x:Double)">
           <Literal x:TypeArguments="s:Nullable(x:Double)" Value="1" />
         </InArgument>
       </uia:DisplayMessage.Opacity>
     </uia:DisplayMessage>
-    <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="486.6666666666667,108" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[taxonomy]" />
-    <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[dom]" DocumentPath="Files\dataPlate.jpg" DocumentText="[doc_Text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="486.6666666666667,307.3333333333333" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
+    <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="478.4,106.4" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[taxonomy]" />
+    <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[dom]" DocumentPath="Files\dataPlate.jpg" DocumentText="[doc_Text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="478.4,302.8" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
       <p:DigitizeDocument.OCREngine>
         <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))" Argument2="{x:Reference __ReferenceID0}">
           <ActivityFunc.Argument1>
             <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
           </ActivityFunc.Argument1>
-          <p1:UiPathDocumentOCR Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="[in_APIKey]" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" Endpoint="https://du.uipath.com/ocr" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,25.333333333333332" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Image="[Image]" Language="auto" Profile="None" Scale="1" Timeout="100000">
+          <p1:UiPathDocumentOCR Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="[in_APIKey]" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" Endpoint="https://du.uipath.com/ocr" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,24.8" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Image="[Image]" Language="auto" Profile="None" Scale="1" Timeout="100000">
             <p1:UiPathDocumentOCR.PredictionId>
               <InArgument x:TypeArguments="x:String">
                 <DelegateArgumentValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_6">
@@ -185,14 +185,14 @@
         </ActivityFunc>
       </p:DigitizeDocument.OCREngine>
     </p:DigitizeDocument>
-    <p2:DataExtractionScope ClassificationResult="{x:Null}" DisplayName="Data Extraction Scope" DocumentObjectModel="[dom]" DocumentPath="Files\dataPlate.jpg" DocumentText="[doc_Text]" DocumentTypeId="SerialNumber.NoCategory.ForkliftLabel" ExtractionResult="[extractedResult]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="486.6666666666667,533.3333333333334" sap2010:WorkflowViewState.IdRef="DataExtractionScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI9885794e781745a99ad4353707487821&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;SerialNumber.NoCategory.ForkliftLabel&quot;:{&quot;FieldMappings&quot;:{&quot;SerialNumber.NoCategory.ForkliftLabel.serial_number&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SerialNumber.NoCategory.ForkliftLabel.serial_number&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;serial_number\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SerialNumber.NoCategory.ForkliftLabel.sn_label&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SerialNumber.NoCategory.ForkliftLabel.sn_label&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;sn_label\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SerialNumber.NoCategory.ForkliftLabel.model_number&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SerialNumber.NoCategory.ForkliftLabel.model_number&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;\&quot;&quot;,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI9885794e781745a99ad4353707487821&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI9885794e781745a99ad4353707487821&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;serial_number&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;sn_label&quot;,&quot;SubOptions&quot;:null}]}]}}">
+    <p2:DataExtractionScope ClassificationResult="{x:Null}" DisplayName="Data Extraction Scope" DocumentObjectModel="[dom]" DocumentPath="Files\dataPlate.jpg" DocumentText="[doc_Text]" DocumentTypeId="SerialNumber.NoCategory.ForkliftLabel" ExtractionResult="[extractedResult]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="478.4,525.6" sap2010:WorkflowViewState.IdRef="DataExtractionScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI9885794e781745a99ad4353707487821&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;SerialNumber.NoCategory.ForkliftLabel&quot;:{&quot;FieldMappings&quot;:{&quot;SerialNumber.NoCategory.ForkliftLabel.serial_number&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SerialNumber.NoCategory.ForkliftLabel.serial_number&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;serial_number\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SerialNumber.NoCategory.ForkliftLabel.sn_label&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SerialNumber.NoCategory.ForkliftLabel.sn_label&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;sn_label\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;SerialNumber.NoCategory.ForkliftLabel.model_number&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;SerialNumber.NoCategory.ForkliftLabel.model_number&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;\&quot;&quot;,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI9885794e781745a99ad4353707487821&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI9885794e781745a99ad4353707487821&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;serial_number&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;sn_label&quot;,&quot;SubOptions&quot;:null}]}]}}">
       <p2:DataExtractionScope.Extractors>
-        <p3:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="[in_APIKey]" Configuration="{}{&quot;Endpoint&quot;:&quot;&quot;,&quot;ApiKey&quot;:&quot;/19zJXO7lHEuHhYvV1nRb1K5CRqbhydEfeDgxSE6ajbQKTz4xaDFwl6JPxposzyjVJO3hol2Qq18NHNAtCto9A==&quot;,&quot;SelectedMLSkill&quot;:&quot;MFS_ML_Skill&quot;,&quot;AvailableMLSkills&quot;:[&quot;MFS_ML_Skill&quot;,&quot;MFSSkill&quot;]}" DisplayName="Machine Learning Extractor" Endpoint="https://ai-uipath-we-b.deskover.com/public/mlskills/a17c9af1-091d-4dd2-9cec-ed787c6601c8/cc6eaf2e-9ce9-48c9-acd1-b47913b37d45/mfs-ml-skill" sap:VirtualizedContainerService.HintSize="234,199.33333333333334" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_3" PersistenceId="UI9885794e781745a99ad4353707487821" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
+        <p3:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="[in_APIKey]" Configuration="{}{&quot;Endpoint&quot;:&quot;&quot;,&quot;ApiKey&quot;:&quot;/19zJXO7lHEuHhYvV1nRb1K5CRqbhydEfeDgxSE6ajbQKTz4xaDFwl6JPxposzyjVJO3hol2Qq18NHNAtCto9A==&quot;,&quot;SelectedMLSkill&quot;:&quot;MFS_ML_Skill&quot;,&quot;AvailableMLSkills&quot;:[&quot;MFS_ML_Skill&quot;,&quot;MFSSkill&quot;]}" DisplayName="Machine Learning Extractor" Endpoint="https://ai-uipath-we-b.deskover.com/public/mlskills/a17c9af1-091d-4dd2-9cec-ed787c6601c8/cc6eaf2e-9ce9-48c9-acd1-b47913b37d45/mfs-ml-skill" sap:VirtualizedContainerService.HintSize="234,196.4" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_3" PersistenceId="UI9885794e781745a99ad4353707487821" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
           <p3:MachineLearningExtractor.AvailableMLSkills>
-            <sc:BindingList x:TypeArguments="x:String" AllowEdit="True" AllowNew="False" AllowRemove="True" RaiseListChangedEvents="True">
+            <scg:List x:TypeArguments="x:String" Capacity="2">
               <x:String>MFS_ML_Skill</x:String>
               <x:String>MFSSkill</x:String>
-            </sc:BindingList>
+            </scg:List>
           </p3:MachineLearningExtractor.AvailableMLSkills>
           <p3:MachineLearningExtractor.DocumentBounds>
             <InArgument x:TypeArguments="p4:ResultsDocumentBounds">
@@ -246,17 +246,17 @@
         </p3:MachineLearningExtractor>
       </p2:DataExtractionScope.Extractors>
     </p2:DataExtractionScope>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486.6666666666667,260.6666666666667" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="478.4,53.2" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,180.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="540.4,636.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <p2:DataExtractionScope ClassificationResult="{x:Null}" DisplayName="Data Extraction Scope" DocumentObjectModel="[dom]" DocumentPath="dataPlate.jpg" DocumentText="[doc_Text]" DocumentTypeId="SerialNumber.NoCategory.ForkliftLabel" ExtractionResult="[extractedResult]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="388,70" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI54314103345d4698982bf8a74fd54508&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.ForkliftLabel&quot;:{&quot;FieldMappings&quot;:{&quot;NoGroup.NoCategory.ForkliftLabel.seril_number&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.ForkliftLabel.seril_number&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;serial_number\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.ForkliftLabel.sn_label&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.ForkliftLabel.sn_label&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;sn_label\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI54314103345d4698982bf8a74fd54508&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI54314103345d4698982bf8a74fd54508&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;serial_number&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;sn_label&quot;,&quot;SubOptions&quot;:null}]}]}}">
+          <p2:DataExtractionScope ClassificationResult="{x:Null}" DisplayName="Data Extraction Scope" DocumentObjectModel="[dom]" DocumentPath="dataPlate.jpg" DocumentText="[doc_Text]" DocumentTypeId="SerialNumber.NoCategory.ForkliftLabel" ExtractionResult="[extractedResult]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="478.4,525.6" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI54314103345d4698982bf8a74fd54508&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.ForkliftLabel&quot;:{&quot;FieldMappings&quot;:{&quot;NoGroup.NoCategory.ForkliftLabel.seril_number&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.ForkliftLabel.seril_number&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;serial_number\&quot;&quot;,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.ForkliftLabel.sn_label&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.ForkliftLabel.sn_label&quot;,&quot;ExtractorTaxonomyFieldId&quot;:&quot;\&quot;sn_label\&quot;&quot;,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:&quot;\&quot;\&quot;&quot;}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI54314103345d4698982bf8a74fd54508&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI54314103345d4698982bf8a74fd54508&quot;:[{&quot;FieldId&quot;:&quot;&quot;,&quot;SubOptions&quot;:[{&quot;FieldId&quot;:&quot;serial_number&quot;,&quot;SubOptions&quot;:null},{&quot;FieldId&quot;:&quot;sn_label&quot;,&quot;SubOptions&quot;:null}]}]}}">
             <p2:DataExtractionScope.Extractors>
-              <p3:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="WHQ9JnE8a7+XnijY3nwQMnL2/t2PvBRMk400C32jjmjpaDlF3VJA59oiRBl0W5Dz" Configuration="{}{&quot;Endpoint&quot;:&quot;&quot;,&quot;ApiKey&quot;:&quot;\&quot;WHQ9JnE8a7+XnijY3nwQMnL2/t2PvBRMk400C32jjmjpaDlF3VJA59oiRBl0W5Dz&quot;,&quot;SelectedMLSkill&quot;:&quot;MFS_Data_Extraction_Skill2&quot;,&quot;AvailableMLSkills&quot;:[&quot;MFS_Data_Extraction_Skill2&quot;,&quot;OOB_PO_Skill&quot;,&quot;OOB_PO_Skill_new&quot;,&quot;OOB_Skill_Invoice&quot;,&quot;OOB_Skill_Receipt&quot;,&quot;OOB_Skill_Receipt_v11&quot;]}" DisplayName="Machine Learning Extractor" Endpoint="https://ai-uipath.deskover.com/public/mlskills/27881fe2-7929-4840-95d7-5b16d142f9d7/de3ff10d-58bd-42c1-af9e-5fdd41fdbf42/mfs-data-extraction-skill2" sap:VirtualizedContainerService.HintSize="234,199.33333333333334" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_2" PersistenceId="UI54314103345d4698982bf8a74fd54508" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
+              <p3:MachineLearningExtractor SelectedMLSkill="{x:Null}" ApiKey="WHQ9JnE8a7+XnijY3nwQMnL2/t2PvBRMk400C32jjmjpaDlF3VJA59oiRBl0W5Dz" Configuration="{}{&quot;Endpoint&quot;:&quot;&quot;,&quot;ApiKey&quot;:&quot;\&quot;WHQ9JnE8a7+XnijY3nwQMnL2/t2PvBRMk400C32jjmjpaDlF3VJA59oiRBl0W5Dz&quot;,&quot;SelectedMLSkill&quot;:&quot;MFS_Data_Extraction_Skill2&quot;,&quot;AvailableMLSkills&quot;:[&quot;MFS_Data_Extraction_Skill2&quot;,&quot;OOB_PO_Skill&quot;,&quot;OOB_PO_Skill_new&quot;,&quot;OOB_Skill_Invoice&quot;,&quot;OOB_Skill_Receipt&quot;,&quot;OOB_Skill_Receipt_v11&quot;]}" DisplayName="Machine Learning Extractor" Endpoint="https://ai-uipath.deskover.com/public/mlskills/27881fe2-7929-4840-95d7-5b16d142f9d7/de3ff10d-58bd-42c1-af9e-5fdd41fdbf42/mfs-data-extraction-skill2" sap:VirtualizedContainerService.HintSize="234,196.4" sap2010:WorkflowViewState.IdRef="MachineLearningExtractor_2" PersistenceId="UI54314103345d4698982bf8a74fd54508" RetryOnFailure="True" Timeout="100000" UseServerSideOCR="False">
                 <p3:MachineLearningExtractor.AvailableMLSkills>
                   <sc:BindingList x:TypeArguments="x:String" AllowEdit="True" AllowNew="False" AllowRemove="True" RaiseListChangedEvents="True">
                     <x:String>MFS_Data_Extraction_Skill2</x:String>
@@ -320,17 +320,23 @@
             </p2:DataExtractionScope.Extractors>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </p2:DataExtractionScope>
         </Sequence>
       </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <p2:ExportExtractionResults DataSet="[exportedDataSet]" DisplayName="Export Extraction Results" ExtractionResult="[extractedResult]" sap:VirtualizedContainerService.HintSize="486.6666666666667,182" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_2" IncludeConfidence="False" IncludeOCRConfidence="False" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486.6666666666667,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[exportedDataSet.Tables.Item(&quot;Simple Fields&quot;).Rows(0).Item(&quot;serial_number&quot;).ToString]" />
-    <Assign sap:VirtualizedContainerService.HintSize="486.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <p2:ExportExtractionResults DataSet="[exportedDataSet]" DisplayName="Export Extraction Results" ExtractionResult="[extractedResult]" sap:VirtualizedContainerService.HintSize="478.4,178.8" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_2" IncludeConfidence="False" IncludeOCRConfidence="False" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,94.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[exportedDataSet.Tables.Item(&quot;Simple Fields&quot;).Rows(0).Item(&quot;serial_number&quot;).ToString]" />
+    <Assign sap:VirtualizedContainerService.HintSize="478.4,82.4" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[out_serialNumber]</OutArgument>
       </Assign.To>
@@ -338,13 +344,13 @@
         <InArgument x:TypeArguments="x:String">[exportedDataSet.Tables.Item("Simple Fields").Rows(0).Item("serial_number").ToString]</InArgument>
       </Assign.Value>
     </Assign>
-    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="Black" Hide="6000" sap:VirtualizedContainerService.HintSize="486.6666666666667,128.66666666666666" sap2010:WorkflowViewState.IdRef="DisplayMessage_2" Message="[&quot;Serial number detected. &quot; + &quot;Serial Number is &quot;+ out_serialNumber]" NewStyle="False" Position="BottomCenter" Preset="Custom">
+    <uia:DisplayMessage Handle="{x:Null}" BackColor="Yellow" DisplayName="Display Message" FontSize="18" ForeColor="Black" Hide="6000" sap:VirtualizedContainerService.HintSize="478.4,126" sap2010:WorkflowViewState.IdRef="DisplayMessage_2" Message="[&quot;Serial number detected. &quot; + &quot;Serial Number is &quot;+ out_serialNumber]" NewStyle="False" Position="BottomCenter" Preset="Custom">
       <uia:DisplayMessage.Opacity>
         <InArgument x:TypeArguments="s:Nullable(x:Double)">
           <Literal x:TypeArguments="s:Nullable(x:Double)" Value="1" />
         </InArgument>
       </uia:DisplayMessage.Opacity>
     </uia:DisplayMessage>
-    <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="486.6666666666667,92" sap2010:WorkflowViewState.IdRef="Delay_2" />
+    <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="478.4,91.2" sap2010:WorkflowViewState.IdRef="Delay_2" />
   </Sequence>
 </Activity>
