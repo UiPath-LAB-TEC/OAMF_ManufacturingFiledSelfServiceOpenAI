@@ -1,0 +1,8 @@
+{
+                        "text": "I am writing to submit a warranty claim for our forklift. We have recently encountered error code 90, indicating a battery issue, despite proper maintenance and usage. As the forklift is still within the warranty period, we kindly request prompt assistance in addressing this issue and arranging necessary repairs under the warranty coverage."
+                    },
+                    "from": "alice@company.com",
+                    "sent_at": "2023-07-14T11:02:03.000000+00:00",
+                    "subject": {
+                        "text": "Warranty Claim for Forklift"
+                    }
